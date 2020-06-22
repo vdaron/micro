@@ -1,9 +1,8 @@
 using System;
-using System.Runtime.InteropServices.WindowsRuntime;
 using dFakto.Queue;
 using Google.Protobuf;
 
-namespace Micro.Host_old.RabbitMq
+namespace Micro.Host.RabbitMq
 {
     public class GrpcPayloadSerializer : IPayloadSerializer
     {

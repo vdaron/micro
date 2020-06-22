@@ -1,10 +1,9 @@
-﻿﻿using System;
-using System.Net.Mail;
-using Microsoft.Extensions.DependencyInjection;
+﻿using System;
+using dFakto.Queue;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
 
-namespace dFakto.Queue.RabbitMQ
+namespace Micro.Host.RabbitMq
 {
     public class WorkQueueConsumer : IConsumer
     {

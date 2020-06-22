@@ -3,7 +3,7 @@ using System.Net;
 using System.Threading.Tasks;
 using DnsClient;
 
-namespace Micro.Host_old.Consul
+namespace Micro.Host.Consul
 {
     public class ConsulServiceDiscovery : IServiceDiscovery
     {

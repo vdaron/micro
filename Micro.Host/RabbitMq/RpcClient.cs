@@ -1,12 +1,10 @@
-﻿﻿using System;
-using System.Collections.Generic;
-using System.Net.Mime;
+﻿using System;
 using System.Threading.Tasks;
-using Microsoft.Extensions.DependencyInjection;
+using dFakto.Queue;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
 
-namespace dFakto.Queue.RabbitMQ
+namespace Micro.Host.RabbitMq
 {
     public class RpcClient : IRpcClient
     {

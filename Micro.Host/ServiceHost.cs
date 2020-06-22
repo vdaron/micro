@@ -26,7 +26,7 @@ namespace Micro.Host_old
         private IServiceProvider? _serviceProvider;
         private Task[] _backgroundProcesses = new Task[0];
         private CancellationTokenSource? _backgroundProcessCancellationTokenSource;
-        private List<PluginLoader> _pluginLoaders = new List<PluginLoader>();
+        private readonly List<PluginLoader> _pluginLoaders = new List<PluginLoader>();
 
         public ServiceHost(IServiceProvider serviceProvider, ServiceHostConfig config)
         {

@@ -1,7 +1,7 @@
-﻿﻿using System.Collections.Generic;
+﻿using dFakto.Queue;
 using RabbitMQ.Client;
 
-namespace dFakto.Queue.RabbitMQ
+namespace Micro.Host.RabbitMq
 {
     public class Producer : IProducer, IPublisher
     {

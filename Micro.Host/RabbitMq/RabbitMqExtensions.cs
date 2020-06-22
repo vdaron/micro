@@ -1,12 +1,9 @@
 ﻿using System;
-using Micro;
-using Micro.Host_old.RabbitMq;
-using Microsoft.Extensions.Configuration;
+using dFakto.Queue;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Options;
 using RabbitMQ.Client;
 
-namespace dFakto.Queue.RabbitMQ
+namespace Micro.Host.RabbitMq
 {
     public class RabbitMqConfig
     {
