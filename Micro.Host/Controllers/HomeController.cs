@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
-using Micro.Host_old;
 using Micro.Host.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -39,12 +38,18 @@ namespace Micro.Host.Controllers
 
         public async Task<IActionResult> Start()
         {
-            await _serviceHost.Start();
+            if (!_serviceHost.Running)
+            {
+                await _serviceHost.Start();
+            }
             return View("Index");
         }
         public async Task<IActionResult> Stop()
         {
-            await _serviceHost.Stop();
+            if (_serviceHost.Running)
+            {
+                await _serviceHost.Stop();
+            }
             return View("Index");
         }
     }

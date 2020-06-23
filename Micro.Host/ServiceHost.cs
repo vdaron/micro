@@ -1,10 +1,7 @@
 using System;
 using System.Collections.Generic;
-using System.Globalization;
 using System.IO;
 using System.Linq;
-using System.Reflection;
-using System.Runtime.InteropServices.WindowsRuntime;
 using System.Threading;
 using System.Threading.Tasks;
 using dFakto.Queue;
@@ -15,7 +12,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
-namespace Micro.Host_old
+namespace Micro.Host
 {
     public class ServiceHost
     {
@@ -34,6 +31,8 @@ namespace Micro.Host_old
             _baseServiceProvider = serviceProvider;
             _config = config;
         }
+
+        public bool Running => _serviceProvider != null;
         
         public async Task Start()
         {
@@ -70,7 +69,6 @@ namespace Micro.Host_old
 
             _backgroundProcesses = new Task[0];
             _serviceProvider = null;
-
             
             _logger.LogInformation("Unloading Plugins");
             foreach (var plugin in _pluginLoaders)

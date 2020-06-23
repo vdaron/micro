@@ -1,4 +1,4 @@
-namespace Micro.Host_old
+namespace Micro.Host
 {
     public class ServiceHostConfig
     {
